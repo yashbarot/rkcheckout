@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<checkout_onepage_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+		
+        <reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/rkcheckout.css</name><params/><if/></action>
+		</reference>
+		
+        <reference name="header">
+			<remove name="topMenu"/>
+			<remove name="top.menu"/>
+			<remove name="top.links"/>
+			<remove name="store_language"/>
+			<remove name="top.search"/>
+		</reference>
+		
+		<remove name="left"/>
+        <remove name="right"/>
+		
+        <reference name="content">
+            <block type="cms/block" name="checkout_usps" after="-">
+				<action method="setBlockId"><block_id>checkout-usps</block_id></action>
+			</block> 
+        </reference>
+		
+		<reference name="checkout.onepage">
+			<action method="setTemplate"><template>rkcheckout/onepage.phtml</template></action>
+		</reference>
+		
+		<reference name="checkout.onepage.login">
+			<action method="setTemplate"><template>rkcheckout/onepage/login.phtml</template></action>
+            <block type="cms/block" name="checkout_register_benefits" after="-">
+				<action method="setBlockId"><block_id>checkout-register-benefits</block_id></action>
+			</block>
+		</reference>
+		
+	</checkout_onepage_index>
+	
+</layout>
