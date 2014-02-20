@@ -4,9 +4,6 @@
 		<Redkiwi_Rkcheckout>
 			<active>true</active>
 			<codePool>community</codePool>
-			<depends>
-				<Redkiwi_Rkextbase/>
-			</depends>
 		</Redkiwi_Rkcheckout>
 	</modules>
 </config>
